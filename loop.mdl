@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.65"
+    ComputedModelVersion    "1.94"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [47.0, 87.0, 1861.0, 616.0]
+      Location		      [19.0, 118.0, 1861.0, 744.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -51,30 +51,30 @@ Model {
 	Dimension		3
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1819.0, 446.0]
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "100"
+	  Extents		  [1819.0, 574.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [7.0, 0.0]
+	  Offset		  [-20.5, -2.5187542289495468]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "122"
-	  Extents		  [1716.0, 446.0]
+	  IsActive		  [1]
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
+	  Extents		  [1819.0, 574.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [0.0, 0.0]
+	  Offset		  [7.5250007808208466, -88.000001013278961]
 	}
 	Object {
 	  $ObjectID		  7
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "106"
-	  Extents		  [1716.0, 446.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [0.0, 0.0]
+	  Extents		  [1819.0, 574.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-0.8000000000001819, -31.366666595141169]
 	}
 	PropName		"EditorsInfo"
       }
@@ -86,9 +86,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "rootprfl"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Sep 14 18:00:02 2015"
-  RTWModifiedTimeStamp	  364149792
-  ModelVersionFormat	  "1.%<AutoIncrement:65>"
+  LastModifiedDate	  "Tue Sep 15 17:26:46 2015"
+  RTWModifiedTimeStamp	  364235084
+  ModelVersionFormat	  "1.%<AutoIncrement:94>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -203,7 +203,7 @@ Model {
 	  $ObjectID		  10
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
-	  StopTime		  "150"
+	  StopTime		  "50"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -890,35 +890,6 @@ Model {
       Interpolate	      on
     }
     Block {
-      BlockType		      InstantaneousEntityCountingScope
-      PlotType		      "Stem"
-      AttributeNameY	      "Count"
-      AttributeNameX	      "Count"
-      XInputOptionEntity      "Event time"
-      EnableEntityOutport     on
-      OpenScopeAtSimStart     on
-      XMin		      "0"
-      XMax		      "10"
-      XLimitExceededOption    "Stretch axis limits"
-      YMin		      "0"
-      YMax		      "10"
-      YLimitExceededOption    "Stretch axis limits"
-      AxisGrid		      on
-      Title		      " "
-      XLabel		      " "
-      YLabel		      " "
-      FigurePosition	      "se_figureposition([5 60 25 25])"
-      ShowCountPlotted	      off
-      DataStoreOption	      "Limited"
-      DataPointsLimit	      "10000"
-      StatNumberArrived	      off
-      LineColors	      "b"
-      LineStyles	      "-"
-      LineMarkers	      "."
-      ShowToolbar	      on
-      BlockRole		      "Entity Count"
-    }
-    Block {
       BlockType		      Outport
       Port		      "1"
       OutMin		      "[]"
@@ -1062,7 +1033,7 @@ Model {
   }
   System {
     Name		    "loop"
-    Location		    [47, 87, 1908, 703]
+    Location		    [19, 118, 1880, 862]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1076,14 +1047,32 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "130"
+    SIDHighWatermark	    "158"
     Block {
       BlockType		      Display
       Name		      "Accepted"
       SID		      "30"
       Ports		      [1]
-      Position		      [1720, 70, 1810, 100]
+      Position		      [1985, 45, 2075, 75]
       ZOrder		      -1
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Confusion Matrix 1"
+      SID		      "158"
+      Ports		      [1]
+      Position		      [1150, 106, 1295, 144]
+      ZOrder		      56
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Confusion Matrix 2"
+      SID		      "135"
+      Ports		      [1]
+      Position		      [1625, 141, 1770, 179]
+      ZOrder		      55
       Decimation	      "1"
     }
     Block {
@@ -1100,7 +1089,7 @@ Model {
       Name		      "Display1"
       SID		      "26"
       Ports		      [1]
-      Position		      [1105, 60, 1195, 90]
+      Position		      [1015, 45, 1105, 75]
       ZOrder		      -1
       Decimation	      "1"
     }
@@ -1127,7 +1116,7 @@ Model {
       Name		      "Display4"
       SID		      "29"
       Ports		      [1]
-      Position		      [940, 60, 1030, 90]
+      Position		      [835, 60, 925, 90]
       ZOrder		      -1
       Decimation	      "1"
     }
@@ -1145,7 +1134,7 @@ Model {
       Name		      "Entity Sink"
       SID		      "34"
       Ports		      [0, 1, 0, 0, 0, 1]
-      Position		      [1605, 58, 1690, 112]
+      Position		      [1870, 33, 1955, 87]
       ZOrder		      -2
       InputPortMap	      ""
       OutputPortMap	      "o0"
@@ -1161,7 +1150,7 @@ Model {
       Name		      "Entity Sink1"
       SID		      "36"
       Ports		      [0, 1, 0, 0, 0, 1]
-      Position		      [1605, 148, 1690, 202]
+      Position		      [1870, 173, 1955, 227]
       ZOrder		      -2
       InputPortMap	      ""
       OutputPortMap	      "o0"
@@ -1221,7 +1210,7 @@ Model {
       Name		      "FIFO Queue2"
       SID		      "16"
       Ports		      [0, 1, 0, 0, 0, 1, 1]
-      Position		      [940, 122, 1025, 178]
+      Position		      [835, 122, 920, 178]
       ZOrder		      -1
       InputPortMap	      ""
       OutputPortMap	      "o0"
@@ -1243,7 +1232,7 @@ Model {
       Name		      "FIFO Queue3"
       SID		      "17"
       Ports		      [0, 0, 0, 0, 0, 1, 1]
-      Position		      [1265, 177, 1350, 233]
+      Position		      [1340, 172, 1425, 228]
       ZOrder		      -1
       InputPortMap	      ""
       OutputPortMap	      ""
@@ -1313,8 +1302,8 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Function-Call\nSubsystem"
-	    Location		    [150, 87, 1908, 703]
-	    Open		    on
+	    Location		    [47, 87, 1908, 703]
+	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -1811,64 +1800,6 @@ Model {
       }
     }
     Block {
-      BlockType		      InstantaneousEntityCountingScope
-      Name		      "Input"
-      SID		      "3"
-      Ports		      [0, 0, 0, 0, 0, 1, 1]
-      Position		      [420, 118, 505, 172]
-      ZOrder		      -3
-      BackgroundColor	      "yellow"
-      CopyFcn		      "des.scope.CallbackSupport('seCopyFcn',gcbh)"
-      DeleteFcn		      "des.scope.CallbackSupport('seDeleteFcn',gcbh)"
-      LoadFcn		      "des.scope.CallbackSupport('seLoadFcn',gcbh)"
-      PreSaveFcn	      "des.scope.CallbackSupport('sePreSaveFcn',gcbh)"
-      StartFcn		      "des.scope.CallbackSupport('seStartFcn',gcbh)"
-      StopFcn		      "des.scope.CallbackSupport('seStopFcn',gcbh)"
-      NameChangeFcn	      "des.scope.CallbackSupport('seNameChangeFcn',gcbh)"
-      OpenFcn		      "des.scope.CallbackSupport('seOpenFcn',gcbh)"
-      InputPortMap	      ""
-      OutputPortMap	      ""
-      Port {
-	PortType		2
-	PortNumber		1
-	ConnectionType		"SimEventsDDv2.SEPortIn"
-      }
-      Port {
-	PortType		3
-	PortNumber		1
-	ConnectionType		"SimEventsDDv2.SEPortOut"
-      }
-    }
-    Block {
-      BlockType		      InstantaneousEntityCountingScope
-      Name		      "Mixed"
-      SID		      "20"
-      Ports		      [0, 0, 0, 0, 0, 1, 1]
-      Position		      [830, 123, 915, 177]
-      ZOrder		      -3
-      BackgroundColor	      "yellow"
-      CopyFcn		      "des.scope.CallbackSupport('seCopyFcn',gcbh)"
-      DeleteFcn		      "des.scope.CallbackSupport('seDeleteFcn',gcbh)"
-      LoadFcn		      "des.scope.CallbackSupport('seLoadFcn',gcbh)"
-      PreSaveFcn	      "des.scope.CallbackSupport('sePreSaveFcn',gcbh)"
-      StartFcn		      "des.scope.CallbackSupport('seStartFcn',gcbh)"
-      StopFcn		      "des.scope.CallbackSupport('seStopFcn',gcbh)"
-      NameChangeFcn	      "des.scope.CallbackSupport('seNameChangeFcn',gcbh)"
-      OpenFcn		      "des.scope.CallbackSupport('seOpenFcn',gcbh)"
-      InputPortMap	      ""
-      OutputPortMap	      ""
-      Port {
-	PortType		2
-	PortNumber		1
-	ConnectionType		"SimEventsDDv2.SEPortIn"
-      }
-      Port {
-	PortType		3
-	PortNumber		1
-	ConnectionType		"SimEventsDDv2.SEPortOut"
-      }
-    }
-    Block {
       BlockType		      PathCombiner
       Name		      "Path Combiner"
       SID		      "21"
@@ -1900,7 +1831,7 @@ Model {
       Name		      "Reject"
       SID		      "35"
       Ports		      [1]
-      Position		      [1720, 160, 1810, 190]
+      Position		      [1985, 185, 2075, 215]
       ZOrder		      -1
       Decimation	      "1"
     }
@@ -1908,14 +1839,14 @@ Model {
       BlockType		      SubSystem
       Name		      "Sorting 1"
       SID		      "100"
-      Ports		      [0, 1, 0, 0, 0, 1, 2]
-      Position		      [1065, 120, 1205, 230]
+      Ports		      [0, 2, 0, 0, 0, 1, 2]
+      Position		      [975, 107, 1115, 218]
       ZOrder		      53
       RequestExecContextInheritance off
       System {
 	Name			"Sorting 1"
-	Location		[150, 87, 1908, 703]
-	Open			off
+	Location		[19, 118, 1880, 862]
+	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1932,7 +1863,7 @@ Model {
 	  Name			  "Get Attribute1"
 	  SID			  "74"
 	  Ports			  [0, 1, 0, 0, 0, 1, 1]
-	  Position		  [140, 137, 225, 193]
+	  Position		  [140, 172, 225, 228]
 	  ZOrder		  27
 	  InputPortMap		  ""
 	  OutputPortMap		  "o1"
@@ -1950,11 +1881,37 @@ Model {
 	  }
 	}
 	Block {
+	  BlockType		  GetAttribute
+	  Name			  "Get Attribute2"
+	  SID			  "155"
+	  Ports			  [0, 2, 0, 0, 0, 1, 1]
+	  Position		  [585, 177, 670, 233]
+	  ZOrder		  71
+	  InputPortMap		  ""
+	  OutputPortMap		  "o1,o2"
+	  AttributeName		  "label|label1"
+	  AttributeMissing	  "Error|Error"
+	  AttributeDefaultValue	  "1|1"
+	  AttributeTreatAsVector  "1|1"
+	  AttributeSendTiming	  "After entity departure|After entity departure"
+	  EvaluatedDefaultAttributeValue "{ [];[]}"
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    ConnectionType	    "SimEventsDDv2.SEPortIn"
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    ConnectionType	    "SimEventsDDv2.SEPortOut"
+	  }
+	}
+	Block {
 	  BlockType		  InfiniteServer
 	  Name			  "Infinite Server1"
 	  SID			  "77"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [295, 207, 380, 263]
+	  Position		  [290, 242, 375, 298]
 	  ZOrder		  30
 	  InputPortMap		  ""
 	  OutputPortMap		  ""
@@ -1974,7 +1931,7 @@ Model {
 	  Name			  "MATLAB Function"
 	  SID			  "75"
 	  Ports			  [1, 1]
-	  Position		  [285, 126, 385, 174]
+	  Position		  [275, 142, 390, 218]
 	  ZOrder		  28
 	  LibraryVersion	  "1.32"
 	  ErrorFcn		  "Stateflow.Translate.translate"
@@ -1997,7 +1954,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "19"
+	    SIDHighWatermark	    "21"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "features"
@@ -2021,7 +1978,7 @@ Model {
 	      SID		      "75::16"
 	      Tag		      "Stateflow S-Function loop 3"
 	      Ports		      [1, 2]
-	      Position		      [180, 100, 230, 160]
+	      Position		      [180, 105, 230, 165]
 	      ZOrder		      7
 	      FunctionName	      "sf_sfun"
 	      Parameters	      "Params"
@@ -2050,7 +2007,7 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      14
+	      ZOrder		      34
 	      SrcBlock		      "features"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -2058,7 +2015,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "label1"
-	      ZOrder		      15
+	      ZOrder		      35
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -2066,14 +2023,141 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      16
+	      ZOrder		      36
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      17
+	      ZOrder		      37
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "MATLAB Function1"
+	  SID			  "156"
+	  Ports			  [2, 1]
+	  Position		  [750, 16, 900, 69]
+	  ZOrder		  72
+	  LibraryVersion	  "1.32"
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  SFBlockType		  "MATLAB Function"
+	  System {
+	    Name		    "MATLAB Function1"
+	    Location		    [223, 338, 826, 833]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "19"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "label"
+	      SID		      "156::1"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "label1"
+	      SID		      "156::19"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      10
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "156::17"
+	      Ports		      [1, 1]
+	      Position		      [270, 230, 320, 270]
+	      ZOrder		      8
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "156::16"
+	      Tag		      "Stateflow S-Function loop 6"
+	      Ports		      [2, 2]
+	      Position		      [180, 100, 230, 160]
+	      ZOrder		      7
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[2 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"cm"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "156::18"
+	      Position		      [460, 241, 480, 259]
+	      ZOrder		      9
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "cm"
+	      SID		      "156::5"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      -5
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "label"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "label1"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "cm"
+	      ZOrder		      3
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "cm"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      5
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -2086,7 +2170,7 @@ Model {
 	  Name			  "Output Switch"
 	  SID			  "5"
 	  Ports			  [0, 1, 0, 0, 0, 1, 2]
-	  Position		  [555, 147, 655, 203]
+	  Position		  [800, 197, 900, 253]
 	  ZOrder		  37
 	  InputPortMap		  ""
 	  OutputPortMap		  "o0"
@@ -2115,7 +2199,7 @@ Model {
 	  Name			  "Set Attribute"
 	  SID			  "76"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [430, 145, 515, 200]
+	  Position		  [445, 175, 530, 230]
 	  ZOrder		  29
 	  InputPortMap		  "u0"
 	  OutputPortMap		  ""
@@ -2137,7 +2221,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "Accept"
 	  SID			  "102"
-	  Position		  [785, 168, 815, 182]
+	  Position		  [1030, 218, 1060, 232]
 	  ZOrder		  39
 	  BlockMirror		  on
 	  Port			  "1"
@@ -2147,7 +2231,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "Particle"
 	  SID			  "103"
-	  Position		  [70, 158, 100, 172]
+	  Position		  [70, 193, 100, 207]
 	  ZOrder		  40
 	  Port			  "2"
 	  Side			  "Left"
@@ -2156,7 +2240,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "Reject"
 	  SID			  "104"
-	  Position		  [785, 208, 815, 222]
+	  Position		  [1030, 258, 1060, 272]
 	  ZOrder		  41
 	  BlockMirror		  on
 	  Port			  "3"
@@ -2166,8 +2250,17 @@ Model {
 	  BlockType		  Outport
 	  Name			  "#Sorted "
 	  SID			  "101"
-	  Position		  [720, 103, 750, 117]
+	  Position		  [1030, 163, 1060, 177]
 	  ZOrder		  38
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Confusion Matrix"
+	  SID			  "157"
+	  Position		  [1030, 38, 1060, 52]
+	  ZOrder		  70
+	  Port			  "2"
 	  IconDisplay		  "Port number"
 	}
 	Line {
@@ -2191,7 +2284,7 @@ Model {
 	  ZOrder		  92
 	  SrcBlock		  "Output Switch"
 	  SrcPort		  1
-	  Points		  [32, 0; 0, -45]
+	  Points		  [32, 0; 0, -35]
 	  DstBlock		  "#Sorted "
 	  DstPort		  1
 	}
@@ -2207,6 +2300,7 @@ Model {
 	  ZOrder		  46
 	  SrcBlock		  "Get Attribute1"
 	  SrcPort		  1
+	  Points		  [18, 0; 0, -5]
 	  DstBlock		  "MATLAB Function"
 	  DstPort		  1
 	}
@@ -2214,7 +2308,7 @@ Model {
 	  ZOrder		  47
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  1
-	  Points		  [18, 0; 0, 10]
+	  Points		  [13, 0; 0, 10]
 	  DstBlock		  "Set Attribute"
 	  DstPort		  1
 	}
@@ -2223,7 +2317,7 @@ Model {
 	  ZOrder		  49
 	  SrcBlock		  "Infinite Server1"
 	  SrcPort		  RConn1
-	  Points		  [10, 0; 0, -50]
+	  Points		  [20, 0; 0, -55]
 	  DstBlock		  "Set Attribute"
 	  DstPort		  LConn1
 	}
@@ -2238,8 +2332,39 @@ Model {
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  90
+	  ZOrder		  106
 	  SrcBlock		  "Set Attribute"
+	  SrcPort		  RConn1
+	  DstBlock		  "Get Attribute2"
+	  DstPort		  LConn1
+	}
+	Line {
+	  ZOrder		  103
+	  SrcBlock		  "Get Attribute2"
+	  SrcPort		  1
+	  Points		  [32, 0; 0, -155]
+	  DstBlock		  "MATLAB Function1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  104
+	  SrcBlock		  "Get Attribute2"
+	  SrcPort		  2
+	  Points		  [53, 0; 0, -150]
+	  DstBlock		  "MATLAB Function1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  105
+	  SrcBlock		  "MATLAB Function1"
+	  SrcPort		  1
+	  DstBlock		  "Confusion Matrix"
+	  DstPort		  1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  107
+	  SrcBlock		  "Get Attribute2"
 	  SrcPort		  RConn1
 	  DstBlock		  "Output Switch"
 	  DstPort		  LConn1
@@ -2250,13 +2375,13 @@ Model {
       BlockType		      SubSystem
       Name		      "Sorting 2"
       SID		      "106"
-      Ports		      [0, 0, 0, 0, 0, 1, 2]
-      Position		      [1375, 147, 1510, 258]
+      Ports		      [0, 1, 0, 0, 0, 1, 2]
+      Position		      [1460, 143, 1595, 257]
       ZOrder		      54
       RequestExecContextInheritance off
       System {
 	Name			"Sorting 2"
-	Location		[150, 87, 1908, 703]
+	Location		[19, 118, 1880, 862]
 	Open			on
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -2268,13 +2393,13 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"125"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  GetAttribute
 	  Name			  "Get Attribute1"
 	  SID			  "86"
 	  Ports			  [0, 1, 0, 0, 0, 1, 1]
-	  Position		  [380, 117, 465, 173]
+	  Position		  [380, 157, 465, 213]
 	  ZOrder		  46
 	  InputPortMap		  ""
 	  OutputPortMap		  "o1"
@@ -2292,11 +2417,37 @@ Model {
 	  }
 	}
 	Block {
+	  BlockType		  GetAttribute
+	  Name			  "Get Attribute2"
+	  SID			  "143"
+	  Ports			  [0, 2, 0, 0, 0, 1, 1]
+	  Position		  [820, 187, 905, 243]
+	  ZOrder		  63
+	  InputPortMap		  ""
+	  OutputPortMap		  "o1,o2"
+	  AttributeName		  "label|label2"
+	  AttributeMissing	  "Error|Error"
+	  AttributeDefaultValue	  "1|1"
+	  AttributeTreatAsVector  "1|1"
+	  AttributeSendTiming	  "After entity departure|After entity departure"
+	  EvaluatedDefaultAttributeValue "{ [];[]}"
+	  Port {
+	    PortType		    2
+	    PortNumber		    1
+	    ConnectionType	    "SimEventsDDv2.SEPortIn"
+	  }
+	  Port {
+	    PortType		    3
+	    PortNumber		    1
+	    ConnectionType	    "SimEventsDDv2.SEPortOut"
+	  }
+	}
+	Block {
 	  BlockType		  InfiniteServer
 	  Name			  "Infinite Server1"
 	  SID			  "87"
 	  Ports			  [0, 0, 0, 0, 0, 1, 1]
-	  Position		  [535, 187, 620, 243]
+	  Position		  [535, 227, 620, 283]
 	  ZOrder		  49
 	  InputPortMap		  ""
 	  OutputPortMap		  ""
@@ -2316,7 +2467,7 @@ Model {
 	  Name			  "MATLAB Function"
 	  SID			  "88"
 	  Ports			  [1, 1]
-	  Position		  [525, 106, 625, 154]
+	  Position		  [525, 154, 625, 206]
 	  ZOrder		  47
 	  LibraryVersion	  "1.32"
 	  ErrorFcn		  "Stateflow.Translate.translate"
@@ -2339,7 +2490,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "19"
+	    SIDHighWatermark	    "21"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "features"
@@ -2363,7 +2514,7 @@ Model {
 	      SID		      "88::16"
 	      Tag		      "Stateflow S-Function loop 4"
 	      Ports		      [1, 2]
-	      Position		      [180, 100, 230, 160]
+	      Position		      [180, 105, 230, 165]
 	      ZOrder		      7
 	      FunctionName	      "sf_sfun"
 	      Parameters	      "Params"
@@ -2392,7 +2543,7 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      1
+	      ZOrder		      21
 	      SrcBlock		      "features"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -2400,7 +2551,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "label2"
-	      ZOrder		      2
+	      ZOrder		      22
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -2408,14 +2559,141 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      3
+	      ZOrder		      23
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      4
+	      ZOrder		      24
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "MATLAB Function1"
+	  SID			  "152"
+	  Ports			  [2, 1]
+	  Position		  [1080, 66, 1230, 119]
+	  ZOrder		  69
+	  LibraryVersion	  "1.32"
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  SFBlockType		  "MATLAB Function"
+	  System {
+	    Name		    "MATLAB Function1"
+	    Location		    [223, 338, 826, 833]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "19"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "label"
+	      SID		      "152::1"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "label2"
+	      SID		      "152::19"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      10
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "152::17"
+	      Ports		      [1, 1]
+	      Position		      [270, 230, 320, 270]
+	      ZOrder		      8
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "152::16"
+	      Tag		      "Stateflow S-Function loop 5"
+	      Ports		      [2, 2]
+	      Position		      [180, 100, 230, 160]
+	      ZOrder		      7
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[2 2]"
+	      EnableBusSupport	      on
+	      Port {
+		PortNumber		2
+		Name			"cm"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "152::18"
+	      Position		      [460, 241, 480, 259]
+	      ZOrder		      9
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "cm"
+	      SID		      "152::5"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      -5
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "label"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "label2"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "cm"
+	      ZOrder		      11
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "cm"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      12
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      13
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -2428,7 +2706,7 @@ Model {
 	  Name			  "Output Switch1"
 	  SID			  "6"
 	  Ports			  [0, 0, 0, 0, 0, 1, 2]
-	  Position		  [790, 127, 890, 183]
+	  Position		  [1115, 207, 1215, 263]
 	  ZOrder		  -2
 	  InputPortMap		  ""
 	  OutputPortMap		  ""
@@ -2457,7 +2735,7 @@ Model {
 	  Name			  "Set Attribute"
 	  SID			  "89"
 	  Ports			  [1, 0, 0, 0, 0, 1, 1]
-	  Position		  [670, 125, 755, 180]
+	  Position		  [690, 185, 775, 240]
 	  ZOrder		  48
 	  InputPortMap		  "u0"
 	  OutputPortMap		  ""
@@ -2479,7 +2757,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "Particle"
 	  SID			  "107"
-	  Position		  [275, 138, 305, 152]
+	  Position		  [275, 178, 305, 192]
 	  ZOrder		  50
 	  Port			  "1"
 	  Side			  "Left"
@@ -2488,7 +2766,7 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "Reject"
 	  SID			  "108"
-	  Position		  [960, 163, 990, 177]
+	  Position		  [1330, 243, 1360, 257]
 	  ZOrder		  51
 	  BlockMirror		  on
 	  Port			  "2"
@@ -2498,19 +2776,19 @@ Model {
 	  BlockType		  PMIOPort
 	  Name			  "Acccept"
 	  SID			  "109"
-	  Position		  [960, 133, 990, 147]
+	  Position		  [1330, 213, 1360, 227]
 	  ZOrder		  52
 	  BlockMirror		  on
 	  Port			  "3"
 	  Side			  "Right"
 	}
-	Line {
-	  LineType		  "Connection"
-	  ZOrder		  100
-	  SrcBlock		  "Acccept"
-	  SrcPort		  RConn1
-	  DstBlock		  "Output Switch1"
-	  DstPort		  RConn1
+	Block {
+	  BlockType		  Outport
+	  Name			  "Confusion Matrix"
+	  SID			  "133"
+	  Position		  [1330, 88, 1360, 102]
+	  ZOrder		  55
+	  IconDisplay		  "Port number"
 	}
 	Line {
 	  LineType		  "Connection"
@@ -2541,6 +2819,7 @@ Model {
 	  ZOrder		  2
 	  SrcBlock		  "Get Attribute1"
 	  SrcPort		  1
+	  Points		  [40, 0]
 	  DstBlock		  "MATLAB Function"
 	  DstPort		  1
 	}
@@ -2549,7 +2828,7 @@ Model {
 	  ZOrder		  5
 	  SrcBlock		  "Infinite Server1"
 	  SrcPort		  RConn1
-	  Points		  [10, 0; 0, -50]
+	  Points		  [10, 0; 0, -30]
 	  DstBlock		  "Set Attribute"
 	  DstPort		  LConn1
 	}
@@ -2557,14 +2836,53 @@ Model {
 	  ZOrder		  3
 	  SrcBlock		  "MATLAB Function"
 	  SrcPort		  1
-	  Points		  [18, 0; 0, 10]
+	  Points		  [18, 0; 0, 20]
 	  DstBlock		  "Set Attribute"
 	  DstPort		  1
 	}
 	Line {
 	  LineType		  "Connection"
-	  ZOrder		  96
+	  ZOrder		  180
 	  SrcBlock		  "Set Attribute"
+	  SrcPort		  RConn1
+	  DstBlock		  "Get Attribute2"
+	  DstPort		  LConn1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  179
+	  SrcBlock		  "Acccept"
+	  SrcPort		  RConn1
+	  DstBlock		  "Output Switch1"
+	  DstPort		  RConn1
+	}
+	Line {
+	  ZOrder		  175
+	  SrcBlock		  "Get Attribute2"
+	  SrcPort		  1
+	  Points		  [71, 0; 0, -115]
+	  DstBlock		  "MATLAB Function1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  176
+	  SrcBlock		  "Get Attribute2"
+	  SrcPort		  2
+	  Points		  [96, 0; 0, -110]
+	  DstBlock		  "MATLAB Function1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  177
+	  SrcBlock		  "MATLAB Function1"
+	  SrcPort		  1
+	  DstBlock		  "Confusion Matrix"
+	  DstPort		  1
+	}
+	Line {
+	  LineType		  "Connection"
+	  ZOrder		  181
+	  SrcBlock		  "Get Attribute2"
 	  SrcPort		  RConn1
 	  DstBlock		  "Output Switch1"
 	  DstPort		  LConn1
@@ -2591,9 +2909,10 @@ Model {
     }
     Line {
       LineType		      "Connection"
-      ZOrder		      3
-      SrcBlock		      "Input"
+      ZOrder		      103
+      SrcBlock		      "Get Attribute"
       SrcPort		      RConn1
+      Points		      [60, 0; 0, -15]
       DstBlock		      "FIFO Queue"
       DstPort		      LConn1
     }
@@ -2611,7 +2930,7 @@ Model {
       ZOrder		      66
       SrcBlock		      "FIFO Queue"
       SrcPort		      RConn1
-      Points		      [31, 0; 0, -25]
+      Points		      [20, 0; 0, -25]
       DstBlock		      "Path Combiner"
       DstPort		      LConn1
     }
@@ -2633,16 +2952,8 @@ Model {
     }
     Line {
       LineType		      "Connection"
-      ZOrder		      11
+      ZOrder		      104
       SrcBlock		      "Path Combiner"
-      SrcPort		      RConn1
-      DstBlock		      "Mixed"
-      DstPort		      LConn1
-    }
-    Line {
-      LineType		      "Connection"
-      ZOrder		      12
-      SrcBlock		      "Mixed"
       SrcPort		      RConn1
       DstBlock		      "FIFO Queue2"
       DstPort		      LConn1
@@ -2703,15 +3014,6 @@ Model {
       DstPort		      LConn1
     }
     Line {
-      LineType		      "Connection"
-      ZOrder		      31
-      SrcBlock		      "Get Attribute"
-      SrcPort		      RConn1
-      Points		      [5, 0; 0, -15]
-      DstBlock		      "Input"
-      DstPort		      LConn1
-    }
-    Line {
       ZOrder		      39
       SrcBlock		      "Get Attribute"
       SrcPort		      1
@@ -2732,7 +3034,7 @@ Model {
       ZOrder		      93
       SrcBlock		      "Sorting 1"
       SrcPort		      RConn1
-      Points		      [23, 0; 0, -90]
+      Points		      [195, 0; 0, -115]
       DstBlock		      "Entity Sink"
       DstPort		      LConn1
     }
@@ -2741,7 +3043,6 @@ Model {
       ZOrder		      94
       SrcBlock		      "FIFO Queue2"
       SrcPort		      RConn1
-      Points		      [5, 0; 0, 10]
       DstBlock		      "Sorting 1"
       DstPort		      LConn1
     }
@@ -2750,7 +3051,6 @@ Model {
       ZOrder		      95
       SrcBlock		      "Sorting 1"
       SrcPort		      RConn2
-      Points		      [15, 0; 0, -5]
       DstBlock		      "FIFO Queue3"
       DstPort		      LConn1
     }
@@ -2775,34 +3075,49 @@ Model {
       ZOrder		      100
       SrcBlock		      "Infinite Server"
       SrcPort		      LConn1
-      Points		      [-18, 0; 0, 55; 1162, 0; 0, -130]
+      Points		      [-18, 0; 0, 55; 1238, 0]
       DstBlock		      "Sorting 2"
       DstPort		      RConn2
+    }
+    Line {
+      ZOrder		      101
+      SrcBlock		      "Sorting 2"
+      SrcPort		      1
+      DstBlock		      "Confusion Matrix 2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      126
+      SrcBlock		      "Sorting 1"
+      SrcPort		      2
+      Points		      [18, 0; 0, -25]
+      DstBlock		      "Confusion Matrix 1"
+      DstPort		      1
     }
     Annotation {
       SID		      "111"
       Name		      "Вторичная сортировка"
-      Position		      [1360, 117, 1525, 283]
+      Position		      [1445, 102, 1785, 273]
       InternalMargins	      [0, 0, 0, 0]
       FixedHeight	      on
       FixedWidth	      on
       ForegroundColor	      "[0.000000, 0.447000, 0.741000]"
       DropShadow	      on
       AnnotationType	      "area_annotation"
-      ZOrder		      16
+      ZOrder		      82
       FontSize		      12
     }
     Annotation {
       SID		      "110"
       Name		      "Первичная сортировка"
-      Position		      [1050, 30, 1225, 260]
+      Position		      [960, 15, 1310, 240]
       InternalMargins	      [0, 0, 0, 0]
       FixedHeight	      on
       FixedWidth	      on
       ForegroundColor	      "[0.000000, 0.447000, 0.741000]"
       DropShadow	      on
       AnnotationType	      "area_annotation"
-      ZOrder		      15
+      ZOrder		      81
       FontSize		      12
     }
   }
@@ -2818,8 +3133,8 @@ Stateflow {
     name		    "loop"
     created		    "01-Sep-2015 18:11:20"
     isLibrary		    0
-    firstData		    35
-    firstTarget		    36
+    firstData		    51
+    firstTarget		    52
     sfVersion		    80000005
   }
   chart {
@@ -3141,7 +3456,7 @@ Stateflow {
     firstJunction	    24
     viewObj		    19
     machine		    1
-    ssIdHighWaterMark	    6
+    ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
     firstData		    21
@@ -3165,8 +3480,11 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function label1 = SortIt(features,Params)\n%#codegen\n% label1 = 1 if model < 0, \n% label1 = 2 i"
-      "f model > 0\nlabel1 = double(Params.B1(1) + features*Params.B1(2:end) > 0)+1;\n"
+      script		      "function label1  = SortIt(features,Params)%function [label1, fp1, fn1] = SortIt(features,Params)\n"
+      "%#codegen\n% label1 = 1 if model < 0, \n% label1 = 2 if model > 0\n% fp1 = 1 if particle is classified as false "
+      "positive, 0 otherwise\n% fn1 = 1 if particle is classified as false negative, 0 otherwise\n\nlabel1 = double(Par"
+      "ams.B1(1) + features*Params.B1(2:end) > 0)+1;\n%fp1 = double((label1 == 1) & (label == 2));\n%fn1 = double((labe"
+      "l1 == 2) & (label == 1));\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -3281,7 +3599,7 @@ Stateflow {
     firstJunction	    32
     viewObj		    27
     machine		    1
-    ssIdHighWaterMark	    6
+    ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
     firstData		    29
@@ -3305,8 +3623,11 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function label2 = SortIt(features,Params)\n%#codegen\n% label1 = 1 if model < 0, \n% label1 = 2 i"
-      "f model > 0\nlabel2 = double(Params.B2(1) + features*Params.B2(2:end) > 0)+1;\n"
+      script		      "function label2  = SortIt(features,Params)%function [label2, fp2, fn2] = SortIt(features,Params)\n"
+      "%#codegen%\n% label2 = 1 if model < 0, \n% label2 = 2 if model > 0\n% fp2 = 1 if particle is classified as false"
+      " positive, 0 otherwise\n% fn2 = 1 if particle is classified as false negative, 0 otherwise\n\nlabel2 = double(Pa"
+      "rams.B2(1) + features*Params.B2(2:end) > 0)+1;\n%fp2 = double((label2 == 1) & (label == 2));\n%fn2 = double((lab"
+      "el2 == 2) & (label == 1));\n\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
@@ -3410,8 +3731,296 @@ Stateflow {
     machine		    1
     chart		    27
   }
-  data {
+  chart {
     id			    35
+    name		    "Sorting 2/MATLAB Function1"
+    windowPosition	    [422 539.941 189 413]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 3600 1200 1.180555555555556]
+    treeNode		    [0 36 0 0]
+    firstTransition	    41
+    firstJunction	    40
+    viewObj		    35
+    visible		    1
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    6
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    37
+    chartFileNumber	    5
+    disableImplicitCasting  1
+    eml {
+      name		      "ConfusionMatrix"
+    }
+  }
+  state {
+    id			    36
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    35
+    treeNode		    [35 0 0 0]
+    superState		    SUBCHART
+    subviewer		    35
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function cm = ConfusionMatrix(label,label2)\n%#codegen\npersistent CM\n\nif isempty(CM)\n    CM=z"
+      "eros(2,2);\nend\n\nCM(1,1) = CM(1,1) + (label==1 & label2==1);\nCM(1,2) = CM(1,2) + (label==1 & label2==2);\nCM("
+      "2,1) = CM(2,1) + (label==2 & label2==1);\nCM(2,2) = CM(2,2) + (label==2 & label2==2);\n\ncm = CM;"
+      editorLayout	      "100 M4x1[10 5 700 500]"
+    }
+  }
+  data {
+    id			    37
+    ssIdNumber		    4
+    name		    "label"
+    linkNode		    [35 0 38]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    38
+    ssIdNumber		    5
+    name		    "cm"
+    linkNode		    [35 37 39]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    39
+    ssIdNumber		    6
+    name		    "label2"
+    linkNode		    [35 38 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  junction {
+    id			    40
+    position		    [23.5747 49.5747 7]
+    chart		    35
+    linkNode		    [35 0 0]
+    subviewer		    35
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    41
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [28.125 13.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      40
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    35
+    linkNode		    [35 0 0]
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    35
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  instance {
+    id			    42
+    name		    "Sorting 2/MATLAB Function1"
+    machine		    1
+    chart		    35
+  }
+  chart {
+    id			    43
+    name		    "Sorting 1/MATLAB Function1"
+    windowPosition	    [422 539.941 189 413]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 3600 1200 1.180555555555556]
+    treeNode		    [0 44 0 0]
+    firstTransition	    49
+    firstJunction	    48
+    viewObj		    43
+    visible		    1
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    6
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    45
+    chartFileNumber	    6
+    disableImplicitCasting  1
+    eml {
+      name		      "ConfusionMatrix"
+    }
+  }
+  state {
+    id			    44
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    43
+    treeNode		    [43 0 0 0]
+    superState		    SUBCHART
+    subviewer		    43
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function cm = ConfusionMatrix(label,label1)\n%#codegen\npersistent CM\n\nif isempty(CM)\n    CM=z"
+      "eros(2,2);\nend\n\nCM(1,1) = CM(1,1) + (label==1 & label1==1);\nCM(1,2) = CM(1,2) + (label==1 & label1==2);\nCM("
+      "2,1) = CM(2,1) + (label==2 & label1==1);\nCM(2,2) = CM(2,2) + (label==2 & label1==2);\n\ncm = CM;"
+      editorLayout	      "100 M4x1[10 5 700 500]"
+    }
+  }
+  data {
+    id			    45
+    ssIdNumber		    4
+    name		    "label"
+    linkNode		    [43 0 46]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    46
+    ssIdNumber		    5
+    name		    "cm"
+    linkNode		    [43 45 47]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    47
+    ssIdNumber		    6
+    name		    "label1"
+    linkNode		    [43 46 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  junction {
+    id			    48
+    position		    [23.5747 49.5747 7]
+    chart		    43
+    linkNode		    [43 0 0]
+    subviewer		    43
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    49
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [28.125 13.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      48
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    43
+    linkNode		    [43 0 0]
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    43
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  instance {
+    id			    50
+    name		    "Sorting 1/MATLAB Function1"
+    machine		    1
+    chart		    43
+  }
+  data {
+    id			    51
     name		    "data"
     linkNode		    [1 0 0]
     scope		    LOCAL_DATA
@@ -3426,7 +4035,7 @@ Stateflow {
     dataType		    "double"
   }
   target {
-    id			    36
+    id			    52
     name		    "sfun"
     description		    "Default Simulink S-Function Target."
     machine		    1
