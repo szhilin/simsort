@@ -1,9 +1,10 @@
-function [ Xcloned, protonum ] = clonesample( X, N )
+function [ Xcloned, protonum ] = clonesample( X, N, hc )
 %CLONE Generation of Xcloned^(N) distributed with PDF estimate 
 %     based on X^(n) with Epanechnikov kernel K and estimated bandwidth h 
 %  Input:  
 %     X - source matrix with data to clone
 %     N - objects number in cloned data matrix
+%     hc - scale coefficient for kernel bandwidth h
 %  Output:
 %     Xcloned - data matrix with N cloned objects
 %     protonum - numbers of source objects which are 
@@ -21,6 +22,10 @@ function [ Xcloned, protonum ] = clonesample( X, N )
 %     hold on
 %     scatter(Scloned(:,1),Scloned(:,2),'r.')
 
+%if ~exist('hc','var')
+%    hc = 1;
+%end
+
 % Get size of source data matrix
 [n d] = size(X);
 
@@ -28,7 +33,7 @@ function [ Xcloned, protonum ] = clonesample( X, N )
 [Xwh, mu, invMat, whMat] = whiten(X,0.0001);
 
 % Estimate kernel smoothing bandwidthes
-h = estimatebw( Xwh );
+h = hc * estimatebw( Xwh );
 %save -ascii Xwh.dat Xwh
 %h = [0.7850228; 0.6657917] % c(dpik(S[,1],kernel="epanech"), dpik(S[,2],kernel="epanech"))
 
