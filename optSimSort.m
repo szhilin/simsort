@@ -31,14 +31,22 @@ mdl = 'loop';
 %R2=x(2);
 
 % Set model arguments
-%Params=setparam('raisin_results_CSandSimple.mat');
+Params=setparam('raisin_results_CSandSimple.mat');
 Params.B1(1) = x(1);
 Params.B2(1) = x(2);
 R1 = Params.B1(1);
 R2 = Params.B2(1);
 
 % Simulate
-simOut = sim(mdl);
+
+try
+  simOut = sim(mdl);
+catch e
+    if(isa(e,'MSLException'))
+        obj = 1000;
+        return;
+    end
+end
 
 % Get simulation outputs
 %simAccepted = simOut.get('sim_Accepted');
@@ -48,4 +56,4 @@ simOut = sim(mdl);
 
 % Calculate objective function
 %obj = -sim_Accepted(end); 
-obj = sim_CMRejected(2,2,end) + sim_CMAccepted(2,1,end);
+obj = sim_CMRejected(1,2,end) + sim_CMAccepted(2,1,end);
