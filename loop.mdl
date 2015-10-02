@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.151"
+    ComputedModelVersion    "1.152"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -20,6 +20,7 @@ Model {
   MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
+  StartFcn		  "initsimsort"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -29,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-4.0, 0.0, 1928.0, 994.0]
+      Location		      [45.0, 37.0, 1847.0, 504.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -63,9 +64,9 @@ Model {
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1886.0, 824.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [3.0, -54.500000000000341]
+	  Extents		  [1805.0, 334.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [7.25, 123.99999999999966]
 	}
 	Object {
 	  $ObjectID		  7
@@ -86,9 +87,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "rootprfl"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Oct 01 17:54:17 2015"
-  RTWModifiedTimeStamp	  365619227
-  ModelVersionFormat	  "1.%<AutoIncrement:151>"
+  LastModifiedDate	  "Fri Oct 02 17:49:36 2015"
+  RTWModifiedTimeStamp	  365705215
+  ModelVersionFormat	  "1.%<AutoIncrement:152>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -1057,7 +1058,7 @@ Model {
   }
   System {
     Name		    "loop"
-    Location		    [-4, 0, 1924, 994]
+    Location		    [45, 37, 1892, 541]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1069,7 +1070,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "80"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "222"
     Block {
