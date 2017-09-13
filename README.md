@@ -1,2 +1,2 @@
 # simsort
-Simulation simple experiments
+Simulation experiment
