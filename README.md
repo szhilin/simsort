@@ -1,2 +1,2 @@
 # simsort
-Very simple sorting simulation experiments
+Simulation experiments
